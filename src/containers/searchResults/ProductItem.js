@@ -1,0 +1,1 @@
+//es el que va a obtener el detalle de cada item
