@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBox from './components/SearchBox';
+
+
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import SearchBox from './containers/Home/SearchBox';
+import SearchResultsContainer from './containers/searchResults/SearchResultsContainer';
+import ResultsComponent from './containers/product/ProductPage';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <SearchBox/>
+      <div>
+        <BrowserRouter>
+          <Route path="/" component={SearchBox}></Route>
+          <Route exact path="/items" component={SearchResultsContainer}></Route>
+          <Route exact path="/items/:id" component={SearchBox}></Route>
+        </BrowserRouter>
       </div>
+
     );
   }
 }
