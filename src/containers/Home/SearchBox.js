@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from '../../images/Logo_ML.png';
 import search from '../../images/ic_Search.png';
+import { Link } from 'react-router-dom';
 
 
 class SearchBox extends Component {
@@ -23,9 +24,8 @@ class SearchBox extends Component {
 
         if (this.state.valueText !== '') {
             const search = this.state.valueText;
-            this.setState({ valueText: '' });
             this.props.history.push(`/items?search=${search}`);
-           
+
         }
         else {
             alert('inserte texto a buscar');
@@ -36,9 +36,9 @@ class SearchBox extends Component {
             <nav className="navbar bg-brand">
                 <div className="container">
                     {/* <Link to="/"> */}
-                    <a className="navbar-brand">
-                        <img src={logo} alt="logo" title="Mercado Libre" />
-                    </a>
+                        <a className="navbar-brand" href='/'>
+                            <img src={logo} alt="logo" title="Mercado Libre" />
+                        </a>
                     {/* </Link> */}
                     <form className="mr-auto nav-search form-inline" onSubmit={this.submitButtonHundler}>
                         <div className="input-group">

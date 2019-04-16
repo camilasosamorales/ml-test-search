@@ -52,32 +52,34 @@ body {
     padding: 30px;
 }
 .product-details-description {
-    padding: 30px;
+    padding: 32px;
 }
 .product-details-description-title {
-    font-size: 20px;
-    margin: 40px 0 20px;
+    font-size: 28px;
+    margin: 40px 0 32px;
 }
 .product-details-description-text {
-    font-size: 14px;
+    font-size: 16px;
     color: #888;
+    margin: 0px;
 }
 .product-details-sidebar {
-    padding: 25px;
+    padding: 32px;
 }
 .product-details-sidebar-info {
     font-size: 14px;
 }
 .product-details-sidebar-title {
-    font-size: 17px;
+    font-size: 24px;
     font-weight: 600;
-    padding: 10px 0 20px;
+    padding: 16px 0 32px;
 }
 .product-details-sidebar-price {
-    font-size: 40px;
+    font-size: 46px;
 }
 .product-details-sidebar-purchase-btn {
-    margin-top: 30px;
+    margin-top: 32px;
+    background-color: #3483FA;
 }
 .product-item {
     display: flex;
@@ -91,7 +93,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 4px;
-    padding-right: 16px;
+    margin-right: 16px;
 }
 .product-item-image-view {
     width: 100%;
@@ -120,4 +122,19 @@ body {
 .product-item-location {
     width: 200px;
     font-size: 12px;
+    padding: 15px 0px;
+}
+.product-item-shipping {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+/*Circle material*/
+.circle-align{
+    text-align: center;
+    min-height: 400px;
+}
+
+.circle-position{
+    margin-top: 200px;
 }
