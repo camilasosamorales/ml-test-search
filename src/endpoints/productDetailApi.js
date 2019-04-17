@@ -23,18 +23,22 @@ const getProductDetails = (idProduct) => {
             return combinedData;
         })
         .then((data) => {
-            console.log(data);
-            return transformDataResult(data["productResponse"], data["detailsReponse"]);
+             return transformDataResult(data["productResponse"], data["detailsReponse"]);
         });
-        // .catch((error) => {
-        //     console.log('error al traer datos de la api: ' + error);
-        // });
+  
 
 
 }
 
 function transformDataResult(itemProduct, itemProductDetail) {
     const response = {};
+
+    var decimals = 0;
+    var stringNumber = (itemProduct.price + '').split('.');
+    if(stringNumber.length > 1){
+        decimals = stringNumber[1].length;
+    }
+    
 
     response.author = { name: 'Camila', lastname: 'Sosa Morales' };
     response.picture = itemProduct.pictures[0].secure_url;
@@ -48,7 +52,7 @@ function transformDataResult(itemProduct, itemProductDetail) {
         price: {
             currency: itemProduct.currency_id,
             amount: itemProduct.price,
-            decimals: ''
+            decimals: decimals
         }
     }
 

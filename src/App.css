@@ -18,9 +18,12 @@ body {
   margin-left: 30px;
 }
 
+.form-inline input[type="text"] {
+    font-size:18px;
+}
+
 .search-button {
   background-color: #EEEEEE;
-  /* background-image: -webkit-gradient(linear,left top,left bottom,from(#EEEEEE),to(#EEEEEE)); */
   background-image: -webkit-linear-gradient(#fff,#f1f1f1);
   background-image: linear-gradient(#fff,#f1f1f1);
 }
@@ -93,7 +96,7 @@ body {
     width: 180px;
     height: 180px;
     border-radius: 4px;
-    margin-right: 16px;
+    /* margin: 16px; */
 }
 .product-item-image-view {
     width: 100%;
@@ -104,7 +107,7 @@ body {
     border-radius: 6px;
 }
 .product-item-body {
-    padding: 10px 30px;
+    padding: 10px 16px;
     display: flex;
     flex-direction: column;
     flex: 1;

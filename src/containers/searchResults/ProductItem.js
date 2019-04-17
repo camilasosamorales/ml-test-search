@@ -14,7 +14,7 @@ const ProductItem = (props) => {
             <div className="product-item-body">
                 <div className="product-item-body-price">
                     <Link to={`/items/${props.productItem.id}`}>
-                        ${props.productItem.price.amount.toLocaleString()}
+                        ${props.productItem.price.amount.toLocaleString('de-DE')}
                     </Link>
                     {props.productItem.free_shipping ? <img className='product-item-shipping' src={shippingLogo} alt='shipping' /> : null}
                 </div>

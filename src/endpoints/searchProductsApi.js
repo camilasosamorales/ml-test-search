@@ -18,20 +18,25 @@ const transformDataResponse = (data) => {
     response.author = { name: 'Camila', lastname: 'Sosa Morales' };
     response.items = transformItemsResponse(data.results);
     response.categories = transformCategoriesResponse(data.filters);
-    
+
     return response;
 
 }
 
 const transformItemsResponse = (items) => {
     return items.map((item) => {
+        var decimals = 0;
+        var stringNumber = (item.price + '').split('.');
+        if (stringNumber.length > 1) {
+            decimals = stringNumber[1].length;
+        }
         return {
             id: item.id,
             title: item.title,
             price: {
                 amount: item.price,
                 currency: item.currency_id,
-                decimals: ''
+                decimals: decimals
             },
             picture: item.thumbnail,
             condition: item.condition,

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import SearchBox from './containers/Home/SearchBox';
 import SearchResultsContainer from './containers/searchResults/SearchResultsContainer';

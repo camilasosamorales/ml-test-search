@@ -19,13 +19,12 @@ class ProductPage extends Component {
     componentDidMount() {
         const { pathname } = this.props.location;
         this.setState({ isFetching: true });
-        // const params = new URLSearchParams(pathname);
-        // const idProduct = params.get('params');
+        
         const arrayParam = pathname.trim().split('/');
         const idProduct = arrayParam[2];
-        getProductDetails(idProduct).
-            then((response) => {
-                console.log(response);
+        getProductDetails(idProduct)
+            .then((response) => {
+               
                 this.setState({
                     results: response,
                     isFetching: false
@@ -55,7 +54,7 @@ class ProductPage extends Component {
                 {(this.state.results.item) ?
                     <Helmet>
                         <title> {`${results.item.title} - Compra en Mercado Libre`}</title>
-                        <meta name="description" content={`Compralo en Mercado Libre a $ ${results.item.price.amount} - Comprá en 12 cuotas - Envío gratis.`} />
+                        <meta name="description" content={`Compralo en Mercado Libre a $ ${results.item.price.amount} - Comprá en 3 cuotas - Envío gratis.`} />
                     </Helmet>
                     :
                     <Helmet>
@@ -71,7 +70,7 @@ class ProductPage extends Component {
     }
 
     renderProduct = (product) => {
-        console.log(product);
+        
         if (this.state.error) {
             return <div><h1>No hay resultados</h1></div>
         }

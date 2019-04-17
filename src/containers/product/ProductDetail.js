@@ -4,10 +4,7 @@ const ProductDetails = (props) => {
 
     let { product } = props;
     let { item } = props;
-    var idProduct;
-
     return (
-        // <h1>{'Hola'}</h1>
         <div className="product-details">
             <div className="row">
                 <div className="col">
@@ -38,7 +35,7 @@ const ProductDetails = (props) => {
                         </h4>
 
                         <div className="product-details-sidebar-price">
-                            $ {(item) ? item.price.amount.toLocaleString() : ''}
+                            $ {(item) ? item.price.amount.toLocaleString('de-DE') : ''}
                         </div>
 
 

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ProductItem from './ProductItem';
 import searchProduct from '../../endpoints/searchProductsApi';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 
@@ -32,7 +31,7 @@ class SearchResultsContainer extends Component {
         const newParam = params.get('search');
         const oldParam = this.state.oldValue;
 
-        if(oldParam != newParam){
+        if(oldParam !== newParam){
             searchProduct(newParam)
             .then((results) => {
                 this.setState({ results : results.items, oldValue : newParam })
