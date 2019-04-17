@@ -25,5 +25,4 @@ It will launch the app on http://localhost:3000
 
 ## Authors
 
-* **Camila Sosa Morales **
-
+* **Camila Sosa Morales** 
