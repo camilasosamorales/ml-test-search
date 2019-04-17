@@ -13,9 +13,9 @@ const ProductDetails = (props) => {
                     </div>
 
                     <div className="product-details-description">
-                        <div className="product-details-description-title">
+                        <h4 className="product-details-description-title">
                             Descripción del producto
-                    </div>
+                        </h4>
                         <p className="product-details-description-text">
                             {product.description}
                         </p>
@@ -40,15 +40,11 @@ const ProductDetails = (props) => {
 
 
                         {(item) ?
-                            <a href={'/items/' + item.id}>
-                                <button className="btn btn-primary btn-block product-details-sidebar-purchase-btn">
-                                    Comprar
-                                </button>
+                            <a href={'/items/' + item.id} className="btn btn-primary btn-block product-details-sidebar-purchase-btn">
+                                Comprar
                             </a> :
-                            <a href='/'>
-                                <button className="btn btn-primary btn-block product-details-sidebar-purchase-btn">
-                                    Comprar
-                                </button>
+                            <a href='/' className="btn btn-primary btn-block product-details-sidebar-purchase-btn">
+                                Comprar
                             </a>
                         }
 

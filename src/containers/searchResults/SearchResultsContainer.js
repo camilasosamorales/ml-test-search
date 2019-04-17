@@ -21,6 +21,9 @@ class SearchResultsContainer extends Component {
             .then((results) => {
                 this.setState({ results : results.items, oldValue : params })
             });
+            // .catch((error)=>{
+                
+            // });
 
     }
 

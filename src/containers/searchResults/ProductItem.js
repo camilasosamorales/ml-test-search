@@ -8,20 +8,21 @@ const ProductItem = (props) => {
         <div className="product-item">
             <div className="product-item-image">
                 <Link to={`/items/${props.productItem.id}`}>
-                <span className="product-item-image-view" style={{ backgroundImage: `url(${props.productItem.picture})` }} />
+                {/* <span className="product-item-image-view" style={{ backgroundImage: `url(${props.productItem.picture})` }} /> */}
+                <img className='product-item-image-view' src={props.productItem.picture} alt='product' />
                 </Link>
             </div>
             <div className="product-item-body">
                 <div className="product-item-body-price">
                     <Link to={`/items/${props.productItem.id}`}>
-                        ${props.productItem.price.amount.toLocaleString('de-DE')}
+                        ${props.productItem.price.amount}
                     </Link>
                     {props.productItem.free_shipping ? <img className='product-item-shipping' src={shippingLogo} alt='shipping' /> : null}
                 </div>
 
-                <div className="product-item-body-title">
+                <h4 className="product-item-body-title">
                     {props.productItem.title}
-                </div>
+                </h4>
             </div>
 
             <div className="product-item-location">

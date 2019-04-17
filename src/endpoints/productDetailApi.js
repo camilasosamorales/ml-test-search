@@ -19,7 +19,7 @@ const getProductDetails = (idProduct) => {
         .then((values) => {
             combinedData["productResponse"] = values[0];
             combinedData["detailsReponse"] = values[1];
-            // console.log(combinedData);
+            
             return combinedData;
         })
         .then((data) => {
@@ -51,7 +51,7 @@ function transformDataResult(itemProduct, itemProductDetail) {
         title: itemProduct.title,
         price: {
             currency: itemProduct.currency_id,
-            amount: itemProduct.price,
+            amount: itemProduct.price.toLocaleString('es-ES'),
             decimals: decimals
         }
     }

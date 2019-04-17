@@ -34,7 +34,7 @@ const transformItemsResponse = (items) => {
             id: item.id,
             title: item.title,
             price: {
-                amount: item.price,
+                amount: item.price.toLocaleString('es-ES'),
                 currency: item.currency_id,
                 decimals: decimals
             },
@@ -49,7 +49,7 @@ const transformItemsResponse = (items) => {
 
 const transformCategoriesResponse = (filters) => {
     let categories = []
-    // console.log(filters);
+    
     categories = filters.map((category) => {
         return category.name;
 
