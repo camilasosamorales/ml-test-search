@@ -1,4 +1,4 @@
-Wellcome to my front-end Mercadolibre challenge solution. I'll explain how to run my react app. 
+Welcome to my front-end Mercadolibre challenge solution. I'll explain how to run my react app. 
 
 ## Installing
 
